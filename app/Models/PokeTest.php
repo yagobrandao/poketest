@@ -2,8 +2,16 @@
 
 namespace App\Models;
 
+/**
+ * [Description PokeTest]
+ */
 class PokeTest
 {
+    /**
+     * @param array $data
+     * 
+     * @return array
+     */
     public static function attack(array $data): array
     {
         if (!self::attackWrongType($data) || !self::attackNegative($data)) {
@@ -13,6 +21,11 @@ class PokeTest
         return self::carryOutAttack($data);
     }
 
+    /**
+     * @param array $data
+     * 
+     * @return bool
+     */
     public static function attackWrongType(array $data): bool
     {
         if (isset($data['attack']['type']) && isset($data['defense']['type'])) {
@@ -24,6 +37,11 @@ class PokeTest
         return true;
     }
 
+    /**
+     * @param array $data
+     * 
+     * @return bool
+     */
     public static function attackNegative(array $data): bool
     {
         if (isset($data['attack']['power'])) {
@@ -35,6 +53,11 @@ class PokeTest
         return true;
     }
 
+    /**
+     * @param array $data
+     * 
+     * @return array
+     */
     private static function carryOutAttack(array $data): array
     {
         $defense = $data['defense']['lyfe'] ?? 0;
