@@ -7,12 +7,7 @@ namespace App\Models;
  */
 class PokeTest
 {
-    /**
-     * @param array $data
-     * 
-     * @return array
-     */
-    public static function attack(array $data): array
+    public static function attack(array $data)
     {
         if (!self::attackWrongType($data) || !self::attackNegative($data)) {
             return response()->json([], 422);
