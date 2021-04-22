@@ -16,29 +16,29 @@
 
 <p>Passing the example payload:</p>
 <code>{
-  "attack": {
-    "type": "flying",
-    "lyfe": "100",
-    "power": "20"
-  },
-  "defense": {
-    "type": "normal",
-    "lyfe": "100"
-  }
-}</code>
+    <p> "attack": { </p>
+    <p> "type": "flying", </p>
+    <p> "lyfe": "100", </p>
+     <p>"power": "20" </p>
+   <p>},</p>
+   <p>"defense": { </p>
+     <p>"type": "normal", </p>
+     <p>"lyfe": "100" </p>
+   <p>}</p>
+ <p>}</p></code>
 
-<p>Output</p>
-<code>{
-  "attack": {
-    "type": "flying",
-    "lyfe": "100",
-    "power": "20"
-  },
-  "defense": {
-    "type": "normal",
-    "lyfe": "80"
-  }
-}</code>
+<p>Output:</p>
+<code>{</p>
+ <p> "attack": {</p>
+   <p> "type": "flying", </p>
+  <p>  "lyfe": "100", </p>
+  <p>  "power": "20" </p>
+ <p> }, </p>
+ <p> "defense": { </p>
+ <p>   "type": "normal", </p>
+  <p>  "lyfe": "80" </p>
+ <p> } </p>
+<p>} </p></code>
 
 ### Rules
 
