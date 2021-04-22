@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Models;
+namespace App\Service;
 
 /**
  * [Description PokeTest]
  */
-class PokeTest
+class PokeTestService
 {
     public static function attack(array $data)
     {
         if (!self::attackWrongType($data) || !self::attackNegative($data)) {
-            return response()->json([], 422);
+            return null;
         }
 
         return self::carryOutAttack($data);

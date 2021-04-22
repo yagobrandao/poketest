@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use App\Models\PokeTest;
+use App\Service\PokeTestService;
 
 class UnitPokeTest extends TestCase
 {
@@ -20,7 +20,7 @@ class UnitPokeTest extends TestCase
                 "lyfe" => "100",
             ]
         ];
-        $response = PokeTest::attack($data);
+        $response = PokeTestService::attack($data);
         $this->assertEquals('80', $response['defense']['lyfe']);
     }
 
@@ -37,7 +37,7 @@ class UnitPokeTest extends TestCase
                 "lyfe" => "100",
             ]
         ];
-        $response = PokeTest::attackWrongType($data);
+        $response = PokeTestService::attackWrongType($data);
         $this->assertEquals(false, $response);
     }
 
@@ -54,7 +54,7 @@ class UnitPokeTest extends TestCase
                 "lyfe" => "100",
             ]
         ];
-        $response = PokeTest::attackNegative($data);
+        $response = PokeTestService::attackNegative($data);
         $this->assertEquals(false, $response);
     }
 
@@ -71,7 +71,7 @@ class UnitPokeTest extends TestCase
                 "lyfe" => "100",
             ]
         ];
-        $response = PokeTest::attack($data);
+        $response = PokeTestService::attack($data);
         $this->assertEquals('80', $response['defense']['lyfe']);
     }
 }
