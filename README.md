@@ -25,11 +25,13 @@
     "type": "normal",
     "lyfe": "100"
   }
-}```
+}
+```
 
 <p>Output: </p>
 
- ```{
+ ```
+ {
   "attack": {
     "type": "flying",
     "lyfe": "100",
@@ -39,7 +41,8 @@
     "type": "normal",
     "lyfe": "80"
   }
-}```
+}
+```
 
 ### Rules
 
