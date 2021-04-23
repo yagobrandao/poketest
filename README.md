@@ -15,7 +15,9 @@
 <code>{url}/api:</code>
 
 <p>Passing the example payload:</p>
-```{
+
+```
+{
   "attack": {
     "type": "flying",
     "lyfe": "100",
