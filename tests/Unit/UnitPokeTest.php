@@ -38,7 +38,7 @@ class UnitPokeTest extends TestCase
             ]
         ];
         $response = PokeTestService::attackWrongType($data);
-        $this->assertEquals(false, $response);
+        $this->assertEquals(true, $response);
     }
 
     public function testattackNegative()
@@ -55,7 +55,7 @@ class UnitPokeTest extends TestCase
             ]
         ];
         $response = PokeTestService::attackNegative($data);
-        $this->assertEquals(false, $response);
+        $this->assertEquals(true, $response);
     }
 
     public function testCarryOutAttack()

@@ -9,7 +9,7 @@ class PokeTestService
 {
     public static function attack(array $data)
     {
-        if (!self::attackWrongType($data) || !self::attackNegative($data)) {
+        if (self::attackWrongType($data) || self::attackNegative($data)) {
             return null;
         }
 
@@ -25,11 +25,11 @@ class PokeTestService
     {
         if (isset($data['attack']['type']) && isset($data['defense']['type'])) {
             if ($data['attack']['type'] == 'normal' && $data['defense']['type'] == 'flying') {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     /**
@@ -41,11 +41,11 @@ class PokeTestService
     {
         if (isset($data['attack']['power'])) {
             if ($data['attack']['power'] < 0) {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     /**
